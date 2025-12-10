@@ -1,0 +1,16 @@
+[
+  {
+    "name": "backup-db",
+    "intervalSeconds": 5,
+    "cronExpression": "0 0/5 * * * ?",
+    "topic": "db-ops",
+    "payload": "{ \"cmd\": \"backup\", \"target\": \"users\" }"
+  },
+  {
+    "name": "email-digest",
+    "intervalSeconds": 10,
+    "cronExpression": "0 0 9 * * ?",
+    "topic": "notifications",
+    "payload": "daily-digest"
+  }
+]
